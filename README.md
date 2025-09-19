@@ -26,8 +26,8 @@ El proyecto sigue una arquitectura **desacoplada** (backend + frontend) y está 
 
 El proyecto está dividido en varios repositorios:
 
-- [📡 Backend (Laravel API)](https://github.com/combinamejor/combinamejor-backend) – API RESTful en PHP 8.2 + Laravel 12, con autenticación y motor de reglas.  
-- [🎨 Frontend (React)](https://github.com/combinamejor/combinamejor-frontend) – Interfaz visual en React + Vite para gestionar prendas y combinaciones.  
+- [📡 Backend (Laravel API)](https://github.com/combinamejor/combinamejor-web) – API RESTful en PHP 8.2 + Laravel 12, con autenticación y motor de reglas.  
+- [🎨 Frontend (React)](https://github.com/combinamejor/combinamejor-web-client) – Interfaz visual en React + Vite para gestionar prendas y combinaciones.  
 - [📖 Documentación](https://github.com/combinamejor/combinamejor-docs) _(en preparación)_ – Guías de uso, arquitectura y despliegue.
 
 ---
