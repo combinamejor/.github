@@ -1,4 +1,4 @@
-# 👗 Combinamejor
+# 👕 Combinamejor
 
 ![Status](https://img.shields.io/badge/Status-WIP-orange)
 ![PHP](https://img.shields.io/badge/PHP-8.2-blue)
@@ -26,9 +26,9 @@ El proyecto sigue una arquitectura **desacoplada** (backend + frontend) y está 
 
 El proyecto está dividido en varios repositorios:
 
-- [📡 Backend (Laravel API)](https://github.com/combinamejor/combinamejor-web) – API RESTful en PHP 8.2 + Laravel 12, con autenticación y motor de reglas.  
-- [🎨 Frontend (React)](https://github.com/combinamejor/combinamejor-web-client) – Interfaz visual en React + Vite para gestionar prendas y combinaciones.  
-- [📖 Documentación](https://github.com/combinamejor/combinamejor-docs) _(en preparación)_ – Guías de uso, arquitectura y despliegue.
+- 📡 **Backend (Laravel API)** – desarrollado en **PHP 8.2 + Laravel 12**, con autenticación, lógica de negocio y motor de reglas. *(repositorio privado)*  
+- 🎨 **Frontend (React)** – aplicación en **React + Vite**, encargada de la interfaz visual y la gestión del armario digital. *(repositorio privado)*  
+- 📖 **Documentación** – guías de uso, arquitectura y despliegue. *(en preparación)*  
 
 ---
 
