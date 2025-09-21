@@ -77,5 +77,7 @@ Si te interesa colaborar, contáctanos directamente.
 
 ## 📄 Licencia
 
-Este proyecto está bajo la licencia MIT.  
+Este proyecto es privado y de uso reservado.  
+Todo el código y la documentación están protegidos por derechos de autor.  
+No se permite la copia, modificación, distribución ni uso sin autorización expresa.  
 Consulta el archivo [LICENSE](LICENSE) para más detalles.
