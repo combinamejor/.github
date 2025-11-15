@@ -1,83 +1,223 @@
-# 👕 Combinamejor
+# 🌟 Combinamejor  
+### Plataforma de Armario Inteligente · Arquitectura Profesional · Seguridad y DevOps Moderno 🚀
 
-![Status](https://img.shields.io/badge/Status-WIP-orange)
+![Status](https://img.shields.io/badge/Status-In_Active_Development-orange)
 ![PHP](https://img.shields.io/badge/PHP-8.2-blue)
 ![Laravel](https://img.shields.io/badge/Laravel-12-red)
 ![React](https://img.shields.io/badge/React-18-61dafb)
-![Docker](https://img.shields.io/badge/Docker-ready-0db7ed)
-![AWS](https://img.shields.io/badge/AWS-preparing-232f3e)
-![License](https://img.shields.io/badge/license-MIT-green)
-
-**Combinamejor** es una plataforma que ayuda a los usuarios a **combinar prendas y accesorios de forma inteligente y visual**, creando outfits personalizados de manera rápida y sencilla.  
-El proyecto sigue una arquitectura **desacoplada** (backend + frontend) y está diseñado con **buenas prácticas de ingeniería de software** para garantizar escalabilidad, mantenibilidad y seguridad.
-
----
-
-## 🌟 Visión
-
-- Simplificar la elección diaria de ropa mediante combinaciones automáticas.  
-- Ofrecer un sistema visual que permita gestionar el armario digital del usuario.  
-- Integrar algoritmos inteligentes para generar sugerencias personalizadas.  
-- Construir un servicio cloud seguro para el almacenamiento y sincronización.  
+![Docker](https://img.shields.io/badge/Docker-Ready-0db7ed)
+![AWS](https://img.shields.io/badge/AWS-Integration_in_progress-232f3e)
+![Security](https://img.shields.io/badge/Security-Enhanced-green)
+![CI/CD](https://img.shields.io/badge/CI/CD-Jenkins_+_GitHub_Actions-blue)
+![Architecture](https://img.shields.io/badge/Architecture-DDD_+_CQRS-green)
+![License](https://img.shields.io/badge/License-Private-yellow)
 
 ---
 
-## 🛠️ Arquitectura
+# 👕 ¿Qué es Combinamejor?
 
-El proyecto está dividido en varios repositorios:
+**Combinamejor** es una plataforma que ayuda a los usuarios a **gestionar su armario digital y crear outfits inteligentes de manera visual y rápida**.  
+El proyecto se desarrolla con estándares profesionales de arquitectura, seguridad, despliegue y automatización.
 
-- 📡 **Backend (Laravel API)** – desarrollado en **PHP 8.2 + Laravel 12**, con autenticación, lógica de negocio y motor de reglas. *(repositorio privado)*  
-- 🎨 **Frontend (React)** – aplicación en **React + Vite**, encargada de la interfaz visual y la gestión del armario digital. *(repositorio privado)*  
-- 📖 **Documentación** – guías de uso, arquitectura y despliegue. *(en preparación)*  
-
----
-
-## 🚀 Estado actual
-
-- ✅ Registro y login de usuarios con Sanctum.  
-- ✅ Arquitectura desacoplada (API + cliente separado).  
-- 🔄 Desarrollo del inventario de prendas.  
-- ⏳ Motor de combinaciones inteligentes.  
-- ⏳ Panel visual de outfits.  
-- ⏳ Integración con AWS (ECS, ECR, S3, RDS).  
+Es el tipo de proyecto que una empresa moderna **podría desplegar en producción sin reescribir nada**.
 
 ---
 
-## 📌 Roadmap global
+# 🔐 Seguridad e Infraestructura (DevSecOps Ready)
 
-- [ ] Completar CRUD de prendas y accesorios.  
-- [ ] Implementar motor de combinaciones basado en reglas e IA.  
-- [ ] Integrar almacenamiento seguro en la nube (AWS).  
-- [ ] Lanzar versión beta del frontend.  
-- [ ] Mejorar documentación y abrir el proyecto a colaboradores externos.  
+Combinamejor se construye siguiendo una **arquitectura segura y automatizada**, con herramientas reales del mundo empresarial.
 
 ---
 
-## 🧑‍💻 Tecnologías principales
+# 🛡️ **Prehooks locales (Seguridad del repositorio)**
 
-- **Backend:** PHP 8.2, Laravel 12, MySQL, Redis, PHPUnit  
-- **Frontend:** React + Vite, TailwindCSS  
-- **Infraestructura:** Docker, Jenkins, AWS (ECS, ECR, S3, RDS)  
-- **Patrones:** DDD + CQRS + SOLID  
+Se utilizan **Git pre-push hooks** para evitar que llegue código inseguro o con errores al repositorio:
 
----
+### ✔ Controles antes de cada push:
+- `PHPStan` (nivel estricto)
+- `Pint` (estilo PSR-12 automático)
+- `PHPUnit` (tests deben pasar)
+- Bloqueo de pushes si algo falla
+- Control de credenciales expuestas
 
-## 📷 Demo (en desarrollo)
-
-_(Próximamente capturas y/o gif mostrando el flujo básico: login → inventario → combinaciones)_
-
----
-
-## 🤝 Contribuciones
-
-Este proyecto se encuentra en desarrollo privado.  
-Si te interesa colaborar, contáctanos directamente.
+Esto garantiza que **ningún commit rompe la calidad del proyecto**.
 
 ---
 
-## 📄 Licencia
+# 🔄 **Integración Continua (CI)**
 
-Este proyecto es privado y de uso reservado.  
-Todo el código y la documentación están protegidos por derechos de autor.  
-No se permite la copia, modificación, distribución ni uso sin autorización expresa.  
-Consulta el archivo [LICENSE](LICENSE) para más detalles.
+## 🚦 **GitHub Actions (Análisis inmediato en cada push)**
+
+Pipeline CI:
+- PHP 8.2 environment
+- Instalación de dependencias
+- Ejecución de PHPStan
+- Ejecución de Pint
+- Ejecución de tests (Feature + Unit)
+- Validación del árbol DDD/CQRS
+
+Resultado:
+✔ Seguridad estática  
+✔ Estilo de código  
+✔ Test suite estable  
+✔ Código listo para pasar a Jenkins/Producción  
+
+*(Workflow privado por razones de seguridad)*
+
+---
+
+# 🔧 **Despliegue Continuo (CD) con Jenkins**
+
+Combinamejor usa **Jenkins** en un servidor EC2 para gestionar:
+
+### 📌 Pipeline de despliegue real
+- Build de imagen Docker del backend
+- Login automático en ECR (Amazon)
+- Push de la imagen versionada al repositorio privado
+- Lanzamiento del servicio ECS (staging/production)
+- Limpieza de imágenes antiguas
+- Notificaciones en consola
+
+### ✔ Seguridad aplicada:
+- IAM Roles mínimos para Jenkins
+- AWS CLI configurada en servidor aislado
+- tokens/credentials gestionados por variables de entorno
+
+---
+
+# ☁️ **Infraestructura en AWS (preparada para producción)**
+
+### Servicios AWS utilizados:
+- **ECS Fargate** → Ejecución serverless del backend
+- **ECR** → Almacenamiento seguro de imágenes Docker
+- **S3** → Gestión de imágenes de prendas y estáticos
+- **IAM** → Roles con permisos mínimos
+- **EC2** → Jenkins y monitorización
+- **CloudWatch** → Logs estructurados
+
+### Arquitectura objetivo (2025)
+```
+GitHub → GitHub Actions → Jenkins → Docker Image → ECR → ECS Fargate → S3 + RDS
+```
+
+---
+
+# 🧱 Arquitectura del Proyecto
+
+Combinamejor está dividido en repositorios independientes:
+
+### 📡 Backend API (Privado)
+- Laravel 12 (PHP 8.2)
+- Arquitectura **DDD + CQRS**
+- Servicios desacoplados
+- Repositorios anti-Eloquent
+- Testing completo
+- Tokenización (Sanctum)
+- Preparado para eventos y mensajería (RabbitMQ + Elixir)
+
+### 🎨 Frontend (Privado)
+- React 18 + Vite
+- TailwindCSS
+- Componentes desacoplados
+- Armario visual + Outfits builder (en progreso)
+
+### 📘 Documentación (En evolución)
+- Diagramas de arquitectura
+- Infraestructura cloud
+- Guías de despliegue
+- Roadmaps empresariales
+
+---
+
+# 🚀 Estado Actual del Desarrollo
+
+### ✔ Backend
+- Módulo Auth completado (Register/Login/Logout)
+- Domain-Driven Design limpio
+- Commands + Handlers (CQRS)
+- ValueObjects estrictos
+- Repositorios desacoplados de Eloquent
+- Seguridad avanzada con prehooks + CI
+
+### ✔ Frontend
+- Flujo inicial y prototipado
+- Integración con API en curso
+
+### 🔄 Próximos pasos
+- CRUD de prendas
+- Motor de combinaciones inteligente
+- Panel visual de outfits
+- Integración con AWS ECS Fargate
+- Sistema de colas con RabbitMQ + Elixir
+
+---
+
+# 🛣 Roadmap Global
+
+- [x] Backend DDD base  
+- [x] Módulo Auth completo  
+- [x] Seguridad y prehooks  
+- [x] Jenkins + ECR + CD  
+- [ ] Wardrobe Engine  
+- [ ] Outfit Engine  
+- [ ] Recommender System (AI)  
+- [ ] RabbitMQ Event Bus  
+- [ ] Monitorización y observabilidad  
+- [ ] Despliegue en producción AWS  
+
+---
+
+# 👨‍💻 Tecnologías y Buenas Prácticas
+
+| Área | Tecnologías |
+|------|-------------|
+| Backend | PHP 8.2 · Laravel 12 · Sanctum |
+| Frontend | React 18 · Vite · TailwindCSS |
+| Arquitectura | DDD · CQRS · Hexagonal · SOLID |
+| Testing | PHPUnit · Feature Tests |
+| Seguridad | Prehooks · GitHub Actions · IAM |
+| Contenedores | Docker · Docker Compose |
+| CI/CD | GitHub Actions · Jenkins |
+| Cloud | AWS ECS · ECR · S3 · IAM |
+
+---
+
+# 📷 Demo (Próximamente)
+
+Se incluirá una demo visual del flujo completo:
+
+- Registro / Login  
+- Armario digital  
+- Combinaciones inteligentes  
+- Outfits visuales  
+
+---
+
+# 🤝 Contribuciones
+
+Este proyecto es privado.  
+Si deseas colaborar:
+
+📩 Contacto directo (LinkedIn o email)
+
+---
+
+# 📄 Licencia
+
+Todo el contenido es privado, con derechos reservados.  
+No se permite copiar, usar ni redistribuir sin autorización.
+
+---
+
+# 🎯 Nota final
+
+Combinamejor es un proyecto en crecimiento continuo, construido con:
+
+- Arquitectura moderna  
+- Seguridad real  
+- DevOps actual  
+- Visión de producto sólida  
+- Mentalidad profesional y escalable  
+
+Un espacio pensado para reclutadores, colaboradores y profesionales que quieran ver **cómo construyo software**.
+
